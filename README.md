@@ -59,6 +59,19 @@ Convenciones:
 - Todos los textos y datos están en `src/data/`; los datos de contacto, en `src/config/sitio.ts`.
 - Los imports usan el alias `@/` → `src/`.
 
+## Integración continua
+
+El workflow `.github/workflows/ci.yml` se ejecuta en cada Pull Request y en cada push hacia `develop` y `main`. En una máquina Ubuntu con Node.js LTS (caché de npm):
+
+1. `npm ci`: instala las versiones exactas del `package-lock.json`.
+2. `npm run lint`: revisión estática con oxlint.
+3. `npm run build`: compilación de TypeScript y build de Vite.
+4. `npm audit --audit-level=high`: falla si hay vulnerabilidades altas o críticas.
+
+El workflow solo tiene permiso de lectura sobre el repositorio (`permissions: contents: read`) y cancela las ejecuciones anteriores de la misma rama cuando llega un commit nuevo. Un PR solo debe aceptarse con el check **CI** en verde.
+
+Dependabot (`.github/dependabot.yml`) revisa cada semana las dependencias de npm y las versiones de las GitHub Actions, y abre sus PR contra `develop`.
+
 ## Flujo de trabajo
 
 - `main`: producción. `develop`: rama principal de trabajo.
