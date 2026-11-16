@@ -244,3 +244,9 @@ export const CRITERIOS_ASG = {
     },
   ],
 }
+
+export const SEO_METODO = {
+  titulo: 'Cómo trabajamos · Constructora del Eje',
+  descripcion:
+    'Cinco fases con entregables, modelado BIM, tablero en línea, indicadores de avance y costo, pruebas de calidad y criterios ASG en cada obra que hacemos.',
+}

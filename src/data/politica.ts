@@ -77,3 +77,9 @@ export const POLITICA = {
     texto: 'Esta política rige a partir de su fecha de publicación: ',
   },
 }
+
+export const SEO_POLITICA = {
+  titulo: 'Política de tratamiento de datos · Constructora del Eje',
+  descripcion:
+    'Política de tratamiento de datos personales de Constructora del Eje según la Ley 1581 de 2012: datos que se recogen, finalidad y derechos del titular.',
+}

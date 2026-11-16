@@ -9,6 +9,7 @@ import {
   CTA_EXPERIENCIA,
   ENCABEZADO_EXPERIENCIA,
   FILTROS_OBRAS,
+  SEO_EXPERIENCIA,
 } from '@/data/experiencia'
 import { OBRAS } from '@/data/obras'
 import { CasosExito } from '@/pages/Experiencia/components/CasosExito'
@@ -41,6 +42,8 @@ export function Experiencia() {
 
   return (
     <>
+      <title>{SEO_EXPERIENCIA.titulo}</title>
+      <meta name="description" content={SEO_EXPERIENCIA.descripcion} />
       <EncabezadoPagina
         etiqueta={ENCABEZADO_EXPERIENCIA.etiqueta}
         titulo={ENCABEZADO_EXPERIENCIA.titulo}

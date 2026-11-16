@@ -1,6 +1,6 @@
 import { EncabezadoPagina } from '@/components/secciones/EncabezadoPagina'
 import { SITIO } from '@/config/sitio'
-import { POLITICA } from '@/data/politica'
+import { POLITICA, SEO_POLITICA } from '@/data/politica'
 import { valorOPorConfirmar } from '@/utils/formato'
 import { formatearNumero } from '@/utils/mensajes'
 import estilos from './PoliticaDatos.module.css'
@@ -20,6 +20,8 @@ const DATOS_RESPONSABLE = [
 export function PoliticaDatos() {
   return (
     <>
+      <title>{SEO_POLITICA.titulo}</title>
+      <meta name="description" content={SEO_POLITICA.descripcion} />
       <EncabezadoPagina etiqueta={POLITICA.etiqueta} titulo={POLITICA.titulo} />
       <div className="seccion">
         <div className="contenedor">
