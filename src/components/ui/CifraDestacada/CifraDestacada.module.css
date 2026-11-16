@@ -1,0 +1,50 @@
+.cifra {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.valor {
+  color: var(--color-noche);
+  font-family: var(--fuente-titulo);
+  font-size: 36px;
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.grande .valor {
+  font-size: clamp(40px, 5vw, 56px);
+  font-stretch: 115%;
+  letter-spacing: -0.02em;
+}
+
+.etiqueta {
+  color: var(--color-azul-texto);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.texto {
+  color: var(--color-texto-2);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.oscura .valor {
+  color: var(--color-blanco);
+}
+
+.oscura .etiqueta {
+  color: var(--color-azul-claro);
+}
+
+.oscura .texto {
+  color: var(--color-texto-oscuro-2);
+}
