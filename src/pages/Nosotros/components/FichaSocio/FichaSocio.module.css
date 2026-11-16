@@ -1,0 +1,156 @@
+.ficha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  padding: 28px;
+  background: var(--color-blanco);
+}
+
+.cabecera {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.foto,
+.sinFoto {
+  flex: none;
+  width: 96px;
+  height: 120px;
+}
+
+.foto {
+  object-fit: cover;
+}
+
+.sinFoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-foto-vacia);
+  color: var(--color-texto-2);
+  font-family: var(--fuente-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.rol {
+  color: var(--color-azul-texto);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.nombre {
+  font-family: var(--fuente-titulo);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.profesion {
+  color: var(--color-texto-2);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.boton {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 2px solid var(--color-azul);
+  border-radius: 0;
+  background: none;
+  color: var(--color-texto);
+  font-family: var(--fuente-titulo);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton:hover {
+  color: var(--color-azul-texto);
+}
+
+.flecha {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.boton[aria-expanded='true'] .flecha {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.panel {
+  padding-top: 20px;
+  border-top: 1px solid var(--color-linea-suave);
+}
+
+.subtitulo {
+  margin-bottom: 8px;
+  color: var(--color-texto-3);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.subtitulo:not(:first-child) {
+  margin-top: 20px;
+}
+
+.parrafo,
+.obras {
+  color: var(--color-texto-2);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.cifras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--fuente-titulo);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.obras {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 480px) {
+  .ficha {
+    padding: 22px;
+  }
+
+  .cabecera {
+    gap: 16px;
+  }
+}

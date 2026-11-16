@@ -51,3 +51,31 @@ export interface Razon {
   titulo: string
   texto: string
 }
+
+/** Cifra fija o calculada a partir de un año (p. ej. años desde la graduación). */
+export type CifraTrayectoria = { texto: string } | { desdeAnio: number; texto: string }
+
+export interface Trayectoria {
+  formacion: string
+  cifras: CifraTrayectoria[]
+  obras: string[]
+}
+
+export interface Socio {
+  rol: string
+  nombre: string
+  profesion: string
+  foto?: Imagen
+  trayectoria?: Trayectoria
+}
+
+export interface HitoTiempo {
+  anio: string
+  texto: string
+}
+
+export interface PresenciaDepartamento {
+  departamento: string
+  municipios: number
+  tono: 'azul' | 'noche' | 'gris'
+}

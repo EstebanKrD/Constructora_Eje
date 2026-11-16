@@ -1,0 +1,45 @@
+.linea {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 32px 0 0;
+  border-top: 2px solid var(--color-noche);
+  list-style: none;
+}
+
+.hito {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 30px en negrita: #0E7FDB cumple 3:1 como texto grande */
+.anio {
+  color: var(--color-azul);
+  font-family: var(--fuente-titulo);
+  font-size: 30px;
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.texto {
+  color: var(--color-texto-2);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+@media (max-width: 899px) {
+  .linea {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .linea {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,45 @@
+.historia {
+  padding-block: 88px;
+  background: var(--color-noche);
+  color: var(--color-blanco);
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 56px;
+}
+
+.titulo {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  font-stretch: 115%;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  overflow-wrap: break-word;
+}
+
+.texto {
+  color: var(--color-texto-oscuro);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 899px) {
+  .columnas {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .historia {
+    padding-block: 64px;
+  }
+
+  .titulo {
+    font-size: clamp(34px, 9.5vw, 40px);
+  }
+}
