@@ -1,0 +1,1 @@
+export { ServiciosResumen } from './ServiciosResumen'
