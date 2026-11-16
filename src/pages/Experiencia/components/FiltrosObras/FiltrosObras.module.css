@@ -1,0 +1,31 @@
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filtro {
+  padding: 10px 16px;
+  border: 1px solid var(--color-borde-input);
+  border-radius: 0;
+  background: var(--color-blanco);
+  color: var(--color-texto);
+  font-family: var(--fuente-titulo);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filtro:hover {
+  border-color: var(--color-noche);
+}
+
+.activo,
+.activo:hover {
+  border-color: var(--color-noche);
+  background: var(--color-noche);
+  color: var(--color-blanco);
+}
