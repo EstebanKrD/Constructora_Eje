@@ -1,10 +1,22 @@
 import complejoDelPorro from '@/assets/obras/complejo-del-porro.webp'
 import corredoresVialesSinu from '@/assets/obras/corredores-viales-sinu.webp'
 import estadioCentenarioAerea from '@/assets/obras/estadio-centenario-aerea.webp'
+import estadioGraderias from '@/assets/obras/estadio-graderias.webp'
+import estadioNoche from '@/assets/obras/estadio-noche.webp'
 import megacolegioAerea from '@/assets/obras/megacolegio-aerea.webp'
+import megacolegioAulas from '@/assets/obras/megacolegio-aulas.webp'
+import megacolegioAzul from '@/assets/obras/megacolegio-azul.webp'
+import megacolegioBloque from '@/assets/obras/megacolegio-bloque.webp'
+import megacolegioCubierta from '@/assets/obras/megacolegio-cubierta.webp'
+import megacolegioEstructura from '@/assets/obras/megacolegio-estructura.webp'
+import megacolegioPasillo from '@/assets/obras/megacolegio-pasillo.webp'
 import placasCubiertas from '@/assets/obras/placas-cubiertas.webp'
+import placasCubiertas2 from '@/assets/obras/placas-cubiertas-2.webp'
+import unidadDeportivaCancha from '@/assets/obras/unidad-deportiva-cancha.webp'
+import unidadDeportivaEstadio from '@/assets/obras/unidad-deportiva-estadio.webp'
 import unidadDeportivaPista from '@/assets/obras/unidad-deportiva-pista.webp'
 import utpBloqueNorte from '@/assets/obras/utp-bloque-norte.webp'
+import utpBloqueNorte2 from '@/assets/obras/utp-bloque-norte-2.webp'
 import villasDeEnsueno from '@/assets/obras/villas-de-ensueno.webp'
 import type { IdCategoriaObra, Obra } from '@/types/contenido'
 
@@ -36,6 +48,14 @@ export const OBRAS: Obra[] = [
       ancho: 1600,
       alto: 1200,
     },
+    galeria: [
+      { src: megacolegioAulas, alt: 'Bloques de aulas con cubierta metálica entre zonas verdes del Megacolegio', ancho: 1041, alto: 968 },
+      { src: megacolegioAzul, alt: 'Bloque de aulas en ladrillo con marcos y pérgola azules del Megacolegio', ancho: 1232, alto: 960 },
+      { src: megacolegioBloque, alt: 'Bloque en ladrillo con celosías y cubierta metálica del Megacolegio', ancho: 1155, alto: 900 },
+      { src: megacolegioCubierta, alt: 'Cubierta curva sobre la plaza central del Megacolegio', ancho: 601, alto: 528 },
+      { src: megacolegioEstructura, alt: 'Vista aérea de un edificio del Megacolegio con pórticos blancos y pasarela', ancho: 1244, alto: 1200 },
+      { src: megacolegioPasillo, alt: 'Pasillo entre bloques de aulas con pérgolas rojas del Megacolegio', ancho: 894, alto: 722 },
+    ],
   },
   {
     id: 'villas-de-ensueno',
@@ -70,10 +90,14 @@ export const OBRAS: Obra[] = [
     ],
     imagen: {
       src: unidadDeportivaPista,
-      alt: 'Pista atlética y graderías cubiertas de la Unidad Deportiva Luis Fernando Montoya',
+      alt: 'Personas corriendo en la pista atlética de la Unidad Deportiva Luis Fernando Montoya, con la gradería cubierta al fondo',
       ancho: 966,
       alto: 655,
     },
+    galeria: [
+      { src: unidadDeportivaCancha, alt: 'Partido en la cancha de la Unidad Deportiva Luis Fernando Montoya, con la gradería cubierta al fondo', ancho: 1329, alto: 570 },
+      { src: unidadDeportivaEstadio, alt: 'Cancha, pista y graderías cubiertas de la Unidad Deportiva Luis Fernando Montoya', ancho: 966, alto: 655 },
+    ],
   },
   {
     id: 'estadio-centenario',
@@ -92,6 +116,10 @@ export const OBRAS: Obra[] = [
       ancho: 1379,
       alto: 1598,
     },
+    galeria: [
+      { src: estadioGraderias, alt: 'Graderías y cancha del Estadio Centenario de Armenia', ancho: 638, alto: 744 },
+      { src: estadioNoche, alt: 'Vista aérea nocturna del Estadio Centenario iluminado', ancho: 638, alto: 744 },
+    ],
   },
   {
     id: 'placas-cubiertas-santa-rosa',
@@ -106,10 +134,13 @@ export const OBRAS: Obra[] = [
     ],
     imagen: {
       src: placasCubiertas,
-      alt: 'Cubierta metálica sobre placas deportivas en Santa Rosa de Osos',
+      alt: 'Cancha múltiple con cubierta metálica en Santa Rosa de Osos',
       ancho: 1165,
       alto: 1350,
     },
+    galeria: [
+      { src: placasCubiertas2, alt: 'Cancha múltiple bajo la cubierta metálica en Santa Rosa de Osos', ancho: 638, alto: 744 },
+    ],
   },
   {
     id: 'bloque-norte-utp',
@@ -129,6 +160,9 @@ export const OBRAS: Obra[] = [
       ancho: 1200,
       alto: 624,
     },
+    galeria: [
+      { src: utpBloqueNorte2, alt: 'Vista aérea del Bloque Norte de la Universidad Tecnológica de Pereira', ancho: 1200, alto: 405 },
+    ],
   },
   {
     id: 'complejo-cultural-del-porro',
@@ -153,7 +187,7 @@ export const OBRAS: Obra[] = [
     ficha: [{ etiqueta: 'Ubicación', valor: 'Córdoba' }],
     imagen: {
       src: corredoresVialesSinu,
-      alt: 'Vía pavimentada de los corredores viales del Sinú en Córdoba',
+      alt: 'Vista aérea de una vía de doble calzada de los corredores viales del Sinú en Córdoba',
       ancho: 1138,
       alto: 749,
     },
