@@ -79,3 +79,16 @@ export interface PresenciaDepartamento {
   municipios: number
   tono: 'azul' | 'noche' | 'gris'
 }
+
+export interface Pilar {
+  titulo: string
+  texto: string
+}
+
+export interface DetalleServicio {
+  etiqueta: string
+  titulo: string
+  texto: string
+  dato?: { valor: string; texto: string }
+  imagen: Imagen
+}
