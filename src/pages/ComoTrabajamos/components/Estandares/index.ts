@@ -1,0 +1,1 @@
+export { Estandares } from './Estandares'

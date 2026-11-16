@@ -1,0 +1,52 @@
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.criterio {
+  padding-top: 24px;
+  border-top: 3px solid var(--color-noche);
+}
+
+.titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.puntos {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.puntos li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--color-texto-2);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Marcador cuadrado azul, coherente con las esquinas rectas */
+.puntos li::before {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--color-azul);
+  content: '';
+}
+
+@media (max-width: 899px) {
+  .columnas {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

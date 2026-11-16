@@ -1,0 +1,1 @@
+export { ValorAgregado } from './ValorAgregado'
