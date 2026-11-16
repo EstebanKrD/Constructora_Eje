@@ -1,0 +1,1 @@
+export { ScrollAlInicio } from './ScrollAlInicio'

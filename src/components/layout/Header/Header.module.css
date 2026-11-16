@@ -1,0 +1,187 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--color-borde);
+  background: var(--color-blanco);
+}
+
+.barra {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+}
+
+.marca {
+  display: block;
+  flex: none;
+}
+
+.logo {
+  width: auto;
+  height: 64px;
+}
+
+.logoCircular {
+  height: 72px;
+}
+
+.navegacion {
+  margin-left: auto;
+}
+
+.lista {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.enlace {
+  display: block;
+  padding: 10px 14px;
+  border-bottom: 2px solid transparent;
+  color: var(--color-texto);
+  font-family: var(--fuente-titulo);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.enlace:hover {
+  color: var(--color-azul-texto);
+}
+
+.activo {
+  border-bottom-color: var(--color-azul);
+  color: var(--color-azul-texto);
+}
+
+.contacto {
+  margin-left: 12px;
+}
+
+.contactoEnMenu {
+  display: none;
+}
+
+.botonMenu {
+  display: none;
+}
+
+/* Menú desplegable por debajo de 960px */
+@media (max-width: 959px) {
+  .botonMenu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    width: 48px;
+    height: 48px;
+    margin-left: 12px;
+    padding: 0;
+    border: 1px solid var(--color-borde-input);
+    border-radius: 0;
+    background: var(--color-blanco);
+    cursor: pointer;
+  }
+
+  .icono,
+  .icono::before,
+  .icono::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-noche);
+    transition: transform 0.2s ease;
+  }
+
+  .icono {
+    position: relative;
+  }
+
+  .icono::before,
+  .icono::after {
+    position: absolute;
+    left: 0;
+    content: '';
+  }
+
+  .icono::before {
+    top: -7px;
+  }
+
+  .icono::after {
+    top: 7px;
+  }
+
+  .iconoAbierto {
+    background: transparent;
+  }
+
+  .iconoAbierto::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .iconoAbierto::after {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navegacion {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    max-height: calc(100vh - 85px);
+    overflow-y: auto;
+    border-bottom: 1px solid var(--color-borde);
+    background: var(--color-blanco);
+  }
+
+  .abierto {
+    display: block;
+  }
+
+  .lista {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px var(--margen-lateral) 20px;
+  }
+
+  .enlace {
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--color-linea-suave);
+  }
+
+  .activo {
+    border-bottom: 2px solid var(--color-azul);
+  }
+
+  .contacto {
+    order: 1;
+    margin-left: auto;
+  }
+}
+
+/* Por debajo de 480px el botón de contacto pasa dentro del menú */
+@media (max-width: 479px) {
+  .contacto {
+    display: none;
+  }
+
+  .botonMenu {
+    margin-left: auto;
+  }
+
+  .contactoEnMenu {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .contactoEnMenu > * {
+    width: 100%;
+  }
+}
