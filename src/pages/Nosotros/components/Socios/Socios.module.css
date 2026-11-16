@@ -1,0 +1,31 @@
+.socios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 48px 0 0;
+  padding: 0;
+  border: 1px solid var(--color-borde-tarjeta);
+  background: var(--color-borde-tarjeta);
+  list-style: none;
+}
+
+/* Cada ficha ocupa toda la altura de su fila: sin huecos entre tarjetas */
+.socios > li {
+  display: flex;
+}
+
+.socios > li > * {
+  flex: 1;
+}
+
+@media (max-width: 1023px) {
+  .socios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .socios {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1 @@
+export { Socios } from './Socios'
