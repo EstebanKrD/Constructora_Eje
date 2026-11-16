@@ -1,0 +1,121 @@
+.tabla {
+  width: 100%;
+  margin-top: 48px;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tabla thead th {
+  padding: 0 20px 14px 0;
+  border-bottom: 2px solid var(--color-noche);
+  color: var(--color-texto-3);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.tabla tbody th,
+.tabla tbody td {
+  padding: 16px 20px 16px 0;
+  border-bottom: 1px solid var(--color-borde-tarjeta);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.tabla tbody td {
+  color: var(--color-texto-2);
+  white-space: nowrap;
+}
+
+.proyecto {
+  font-weight: 600;
+}
+
+.tabla .numero {
+  padding-right: 0;
+  font-family: var(--fuente-mono);
+  text-align: right;
+}
+
+.tabla tbody .numero {
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+.total {
+  margin-top: 32px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* En móvil cada fila se ve como tarjeta, con la etiqueta de su columna */
+@media (max-width: 760px) {
+  .tabla thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .tabla,
+  .tabla tbody,
+  .tabla tr,
+  .tabla tbody th,
+  .tabla tbody td {
+    display: block;
+  }
+
+  .tabla tbody {
+    display: grid;
+    gap: 1px;
+    border: 1px solid var(--color-borde-tarjeta);
+    background: var(--color-borde-tarjeta);
+  }
+
+  .tabla tr {
+    padding: 20px;
+    background: var(--color-blanco);
+  }
+
+  .tabla tbody th,
+  .tabla tbody td {
+    padding: 0;
+    border: 0;
+    white-space: normal;
+  }
+
+  .tabla tbody th {
+    margin-bottom: 12px;
+  }
+
+  .tabla tbody td + td {
+    margin-top: 10px;
+  }
+
+  .tabla tbody .numero {
+    text-align: left;
+  }
+
+  .tabla tbody td::before {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--color-texto-3);
+    content: attr(data-etiqueta);
+    /* Texto alternativo vacío: el lector de pantalla ya anuncia el encabezado de columna */
+    content: attr(data-etiqueta) / '';
+    font-family: var(--fuente-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .total {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
