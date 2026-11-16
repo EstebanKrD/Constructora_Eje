@@ -1,0 +1,1 @@
+export { CifrasHero } from './CifrasHero'

@@ -1,0 +1,52 @@
+.lista {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.razon {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 3px solid var(--color-noche);
+}
+
+/* Número grande (≥ 24px): #0E7FDB cumple 3:1 como texto grande */
+.numero {
+  color: var(--color-azul);
+  font-family: var(--fuente-titulo);
+  font-size: 44px;
+  font-weight: 800;
+  font-stretch: 115%;
+  line-height: 1;
+}
+
+.titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.texto {
+  color: var(--color-texto-2);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+@media (max-width: 1023px) {
+  .lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .lista {
+    grid-template-columns: 1fr;
+  }
+}
