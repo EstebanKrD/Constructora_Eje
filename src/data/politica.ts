@@ -66,7 +66,8 @@ export const POLITICA = {
       titulo: '6. Cómo ejercer sus derechos',
       parrafos: [
         'Escriba al correo o comuníquese al teléfono del responsable indicados en el punto 1, con su nombre, un dato de contacto y la petición concreta.',
-        'Las consultas se atienden en un plazo máximo de diez (10) días hábiles y los reclamos en un plazo máximo de quince (15) días hábiles, según los artículos 14 y 15 de la Ley 1581 de 2012.',
+        'Consultas (artículo 14 de la Ley 1581 de 2012): se atienden en un término máximo de diez (10) días hábiles contados a partir de la fecha de recibo. Cuando no sea posible atenderlas dentro de ese término, se informarán al interesado los motivos de la demora y la fecha en que se atenderá la consulta, que en ningún caso superará los cinco (5) días hábiles siguientes al vencimiento del primer término.',
+        'Reclamos (artículo 15 de la Ley 1581 de 2012): se atienden en un término máximo de quince (15) días hábiles contados a partir del día siguiente a la fecha de su recibo. Cuando no sea posible atenderlos dentro de ese término, se informarán al interesado los motivos de la demora y la fecha en que se atenderá el reclamo, que en ningún caso superará los ocho (8) días hábiles siguientes al vencimiento del primer término.',
       ],
     },
   ] satisfies SeccionPolitica[],
