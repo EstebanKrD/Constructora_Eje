@@ -1,0 +1,1 @@
+export { NoEncontrado } from './NoEncontrado'

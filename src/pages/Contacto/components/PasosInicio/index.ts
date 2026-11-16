@@ -1,0 +1,1 @@
+export { PasosInicio } from './PasosInicio'

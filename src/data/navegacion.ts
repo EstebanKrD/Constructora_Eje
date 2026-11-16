@@ -35,3 +35,9 @@ export const FOOTER = {
   politica: { etiqueta: 'Política de tratamiento de datos', ruta: '/politica-de-datos' },
   lema: 'DISEÑO · CONSTRUCCIÓN · ESTRUCTURA METÁLICA',
 }
+
+export const NO_ENCONTRADO = {
+  etiqueta: 'ERROR 404',
+  titulo: 'Esta página no existe.',
+  boton: { etiqueta: 'Volver al inicio', ruta: '/' },
+}
