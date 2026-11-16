@@ -1,0 +1,52 @@
+:root {
+  /* Fondos y marca */
+  --color-fondo: #f4f6f9;
+  --color-blanco: #ffffff;
+  --color-noche: #0b1b30;
+  --color-noche-2: #07111f;
+  --color-azul: #0e7fdb;
+  --color-azul-hover: #1e95f2;
+  --color-azul-claro: #5fb4f5;
+  /* Azul para texto pequeño sobre fondo claro (contraste ≥ 4.5:1) */
+  --color-azul-texto: #0b6bc0;
+
+  /* Texto */
+  --color-texto: #0b1b30;
+  --color-texto-2: #4a5a70;
+  /* Oscurecido desde #6B7C93 para cumplir 4.5:1 sobre #F4F6F9 */
+  --color-texto-3: #5e6e85;
+  --color-texto-oscuro: #c9d3e0;
+  --color-texto-oscuro-2: #9fb0c6;
+  --color-texto-footer: #7f93ae;
+  --color-barra-gris: #8fa6c2;
+
+  /* Bordes y fondos auxiliares sobre claro */
+  --color-borde: #e1e6ed;
+  --color-borde-tarjeta: #dce2ea;
+  --color-borde-input: #cbd3de;
+  --color-foto-vacia: #e1e7ef;
+  --color-linea-suave: #e8edf3;
+  --color-barra-fondo: #eef2f7;
+  --color-input: #f8fafc;
+
+  /* Bordes sobre oscuro */
+  --color-borde-oscuro: #1e3352;
+  --color-borde-oscuro-2: #23395a;
+  --color-borde-footer: #1a2b44;
+  --color-borde-boton-oscuro: #3a4e69;
+
+  /* Tipografía */
+  --fuente-titulo: 'Archivo Variable', 'Arial Narrow', sans-serif;
+  --fuente-texto: 'Public Sans', system-ui, sans-serif;
+  --fuente-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Diseño */
+  --ancho-contenedor: 1280px;
+  --margen-lateral: 32px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --margen-lateral: 20px;
+  }
+}

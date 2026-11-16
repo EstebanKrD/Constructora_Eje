@@ -1,0 +1,11 @@
+/* Archivo variable con eje de ancho (wdth) para usar font-stretch */
+@import '@fontsource-variable/archivo/wdth.css';
+
+/* Public Sans */
+@import '@fontsource/public-sans/400.css';
+@import '@fontsource/public-sans/500.css';
+@import '@fontsource/public-sans/600.css';
+
+/* IBM Plex Mono */
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
