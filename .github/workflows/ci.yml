@@ -37,5 +37,8 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Cabeceras iguales en _headers y .htaccess
+        run: npm run verificar:cabeceras
+
       - name: Auditoría de dependencias (altas y críticas)
         run: npm audit --audit-level=high
