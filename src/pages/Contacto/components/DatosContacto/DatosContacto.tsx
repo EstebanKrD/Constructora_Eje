@@ -5,7 +5,7 @@ import { formatearNumero } from '@/utils/mensajes'
 import estilos from './DatosContacto.module.css'
 
 /** Todos los datos salen de `SITIO`; lo que falta se muestra como «Por confirmar». */
-const telefono = SITIO.whatsappNumero.trim() || SITIO.telefono.trim()
+const telefono = SITIO.whatsappNumero?.trim() || SITIO.telefono.trim()
 
 const DATOS = [
   {

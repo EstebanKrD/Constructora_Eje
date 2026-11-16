@@ -4,8 +4,8 @@ export type CanalSolicitud = 'whatsapp' | 'correo'
 
 export interface ConfigSitio {
   versionLogoHeader: VersionLogo
-  /** Formato 57XXXXXXXXXX */
-  whatsappNumero: string
+  /** Formato 57XXXXXXXXXX; null mientras la empresa no lo entregue. */
+  whatsappNumero: string | null
   correo: string
   telefono: string
   direccion: string

@@ -6,7 +6,7 @@ import type { ConfigSitio } from '@/types/sitio'
  */
 export const SITIO: ConfigSitio = {
   versionLogoHeader: 'horizontal', // 'horizontal' (logo-rect) | 'circular' (logo-circulo)
-  whatsappNumero: '', // formato 57XXXXXXXXXX
+  whatsappNumero: null, // pendiente; formato 57XXXXXXXXXX (null = «Por confirmar»)
   correo: '',
   telefono: '',
   direccion: '',

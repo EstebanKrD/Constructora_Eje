@@ -31,8 +31,9 @@ export function formatearNumero(numero: string): string {
  * datos válidos; si no, el otro; null si no hay ninguno.
  */
 export function elegirCanal(sitio: ConfigSitio): CanalEnvio | null {
-  const whatsapp: CanalEnvio | null = esNumeroWhatsappValido(sitio.whatsappNumero)
-    ? { tipo: 'whatsapp', numero: sitio.whatsappNumero.trim() }
+  const numero = sitio.whatsappNumero?.trim() ?? ''
+  const whatsapp: CanalEnvio | null = esNumeroWhatsappValido(numero)
+    ? { tipo: 'whatsapp', numero }
     : null
   const correo: CanalEnvio | null = esCorreoValido(sitio.correo)
     ? { tipo: 'correo', correo: sitio.correo.trim() }
