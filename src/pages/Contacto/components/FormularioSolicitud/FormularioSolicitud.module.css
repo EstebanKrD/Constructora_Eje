@@ -1,0 +1,32 @@
+.formulario {
+  display: grid;
+  gap: 22px;
+  padding: 36px;
+  border: 1px solid var(--color-borde-tarjeta);
+  background: var(--color-blanco);
+}
+
+.envio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+
+.aviso {
+  padding: 2px 0 2px 10px;
+  border-left: 2px solid var(--color-azul);
+  color: var(--color-texto);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .formulario {
+    padding: 22px;
+  }
+
+  .envio > :first-child {
+    width: 100%;
+  }
+}
