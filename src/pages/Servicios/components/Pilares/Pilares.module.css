@@ -1,0 +1,44 @@
+.seccion {
+  padding-top: 80px;
+}
+
+.pilares {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pilar {
+  padding-top: 24px;
+  border-top: 3px solid var(--color-azul);
+}
+
+.titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.texto {
+  margin-top: 12px;
+  color: var(--color-texto-2);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+@media (max-width: 899px) {
+  .pilares {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion {
+    padding-top: 64px;
+  }
+}
