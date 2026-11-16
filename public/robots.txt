@@ -1,0 +1,7 @@
+# Se permite indexar todo el sitio.
+# La línea Sitemap se completa con la URL absoluta en el build
+# (scripts/generar-sitemap.mjs) cuando SITIO.dominio tiene valor.
+User-agent: *
+Allow: /
+
+Sitemap: /sitemap.xml
