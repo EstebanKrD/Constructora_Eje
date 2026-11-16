@@ -1,0 +1,1 @@
+export { ComoTrabajamos } from './ComoTrabajamos'
