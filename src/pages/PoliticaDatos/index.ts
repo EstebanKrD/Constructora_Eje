@@ -1,0 +1,1 @@
+export { PoliticaDatos } from './PoliticaDatos'

@@ -1,0 +1,81 @@
+.texto {
+  display: grid;
+  gap: 40px;
+  max-width: 760px;
+}
+
+/* Nota visible: borde y fondo, no solo color */
+.nota {
+  padding: 16px 20px;
+  border: 1px solid var(--color-borde-tarjeta);
+  border-left: 3px solid var(--color-azul);
+  background: var(--color-blanco);
+  color: var(--color-texto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.titulo {
+  margin-bottom: 14px;
+  font-family: var(--fuente-titulo);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.parrafo {
+  color: var(--color-texto-2);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.parrafo + .parrafo,
+.parrafo + .lista {
+  margin-top: 12px;
+}
+
+.lista {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--color-texto-2);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.responsable {
+  margin: 0;
+  border-top: 2px solid var(--color-noche);
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-borde-tarjeta);
+  font-size: 16px;
+}
+
+.fila dt {
+  color: var(--color-texto-3);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fila dd {
+  margin: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .fila {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

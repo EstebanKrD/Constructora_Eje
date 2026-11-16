@@ -6,6 +6,7 @@ import { Experiencia } from '@/pages/Experiencia'
 import { Inicio } from '@/pages/Inicio'
 import { NoEncontrado } from '@/pages/NoEncontrado'
 import { Nosotros } from '@/pages/Nosotros'
+import { PoliticaDatos } from '@/pages/PoliticaDatos'
 import { Servicios } from '@/pages/Servicios'
 
 export const router = createBrowserRouter([
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
       { path: 'como-trabajamos', element: <ComoTrabajamos /> },
       { path: 'experiencia', element: <Experiencia /> },
       { path: 'contacto', element: <Contacto /> },
+      { path: 'politica-de-datos', element: <PoliticaDatos /> },
       { path: '*', element: <NoEncontrado /> },
     ],
   },
