@@ -1,0 +1,1 @@
+export { SolicitudLista } from './SolicitudLista'
