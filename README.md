@@ -17,8 +17,11 @@ npm ci            # instala las dependencias exactas del package-lock.json
 npm run dev       # servidor de desarrollo
 npm run lint      # revisión estática
 npm run build     # compila a dist/
-npm run preview   # sirve dist/ localmente
+npm run preview   # sirve dist/ localmente con las cabeceras de seguridad
+npm run verificar:cabeceras  # comprueba que _headers y .htaccess coincidan
 ```
+
+El despliegue (cPanel, Nginx o Cloudflare Pages) se explica en [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md) y las medidas de seguridad en [SECURITY.md](SECURITY.md).
 
 ## Estructura de carpetas
 
@@ -66,7 +69,8 @@ El workflow `.github/workflows/ci.yml` se ejecuta en cada Pull Request y en cada
 1. `npm ci`: instala las versiones exactas del `package-lock.json`.
 2. `npm run lint`: revisión estática con oxlint.
 3. `npm run build`: compilación de TypeScript y build de Vite.
-4. `npm audit --audit-level=high`: falla si hay vulnerabilidades altas o críticas.
+4. `npm run verificar:cabeceras`: las cabeceras de `public/_headers` y `public/.htaccess` deben coincidir.
+5. `npm audit --audit-level=high`: falla si hay vulnerabilidades altas o críticas.
 
 El workflow solo tiene permiso de lectura sobre el repositorio (`permissions: contents: read`) y cancela las ejecuciones anteriores de la misma rama cuando llega un commit nuevo. Un PR solo debe aceptarse con el check **CI** en verde.
 

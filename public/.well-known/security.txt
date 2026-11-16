@@ -1,0 +1,4 @@
+Contact: https://github.com/EstebanKrD/Constructora_Eje/security/advisories/new
+Expires: 2027-11-16T00:00:00.000Z
+Preferred-Languages: es
+# Canonical: https://DOMINIO/.well-known/security.txt (descomentar al tener el dominio)
