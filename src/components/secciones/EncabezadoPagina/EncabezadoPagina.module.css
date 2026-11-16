@@ -1,0 +1,37 @@
+.encabezado {
+  padding-block: 88px;
+  background: var(--color-noche);
+  color: var(--color-blanco);
+}
+
+.titulo {
+  max-width: 16ch;
+  font-family: var(--fuente-titulo);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  font-stretch: 115%;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  overflow-wrap: break-word;
+}
+
+.texto {
+  max-width: 620px;
+  margin-top: 24px;
+  color: var(--color-texto-oscuro);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    padding-block: 64px;
+  }
+}

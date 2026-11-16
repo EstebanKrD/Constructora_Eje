@@ -1,0 +1,1 @@
+export { TarjetaObra } from './TarjetaObra'

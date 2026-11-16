@@ -1,0 +1,1 @@
+export { FranjaClientes } from './FranjaClientes'
