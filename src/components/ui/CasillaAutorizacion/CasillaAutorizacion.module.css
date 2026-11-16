@@ -1,0 +1,44 @@
+.casilla {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fila {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.control {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  border-radius: 0;
+  accent-color: var(--color-azul);
+  cursor: pointer;
+}
+
+.texto {
+  color: var(--color-texto-2);
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.texto a {
+  border-bottom: 1px solid currentColor;
+  color: var(--color-azul-texto);
+  font-weight: 600;
+}
+
+/* El error se indica con texto y línea, nunca solo con color */
+.error {
+  margin: 0;
+  padding: 2px 0 2px 10px;
+  border-left: 2px solid var(--color-azul);
+  color: var(--color-texto);
+  font-size: 14px;
+  line-height: 1.4;
+}
