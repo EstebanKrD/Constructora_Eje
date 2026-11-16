@@ -1,0 +1,124 @@
+.seccion {
+  padding-block: 96px;
+  border-block: 1px solid var(--color-borde);
+  background: var(--color-blanco);
+}
+
+.casos {
+  display: grid;
+  gap: 1px;
+  margin: 48px 0 0;
+  padding: 0;
+  border: 1px solid var(--color-borde-tarjeta);
+  background: var(--color-borde-tarjeta);
+  list-style: none;
+}
+
+.caso {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 48px;
+  padding: 40px;
+  background: var(--color-blanco);
+}
+
+.resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.etiqueta {
+  color: var(--color-azul-texto);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.titulo {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 800;
+  font-stretch: 112%;
+  line-height: 1.15;
+}
+
+.subtitulo {
+  color: var(--color-texto-2);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.cifras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin: 16px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--color-borde-tarjeta);
+  list-style: none;
+}
+
+.fuente {
+  margin-top: auto;
+  padding-top: 12px;
+  color: var(--color-texto-3);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.detalle {
+  padding-left: 32px;
+  border-left: 2px solid var(--color-azul);
+}
+
+.subtituloDetalle {
+  margin-bottom: 8px;
+  color: var(--color-texto-3);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.subtituloDetalle:not(:first-child) {
+  margin-top: 24px;
+}
+
+.parrafo,
+.herramientas {
+  color: var(--color-texto);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.herramientas {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 899px) {
+  .caso {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion {
+    padding-block: 64px;
+  }
+
+  .caso {
+    padding: 24px;
+  }
+
+  .detalle {
+    padding-left: 20px;
+  }
+}
