@@ -45,3 +45,9 @@ export interface Obra {
   imagen: Imagen
   galeria?: Imagen[]
 }
+
+export interface Razon {
+  numero: string
+  titulo: string
+  texto: string
+}
