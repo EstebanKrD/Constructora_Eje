@@ -1,0 +1,1 @@
+export { CriteriosAsg } from './CriteriosAsg'

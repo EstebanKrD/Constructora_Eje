@@ -1,0 +1,1 @@
+export { ControlCalidad } from './ControlCalidad'
