@@ -1,0 +1,1 @@
+export { BloqueSalud } from './BloqueSalud'
