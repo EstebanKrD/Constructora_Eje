@@ -1,0 +1,1 @@
+export { DetalleServicio } from './DetalleServicio'
