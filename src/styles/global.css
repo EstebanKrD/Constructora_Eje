@@ -72,3 +72,30 @@ textarea {
   margin-inline: auto;
   padding-inline: var(--margen-lateral);
 }
+
+/* Bloque de sección con el espaciado vertical estándar */
+.seccion {
+  padding-block: 96px;
+}
+
+/* Título h2 de sección: Archivo 800 al 112 % */
+.titulo-seccion {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(30px, 3.8vw, 46px);
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .seccion {
+    padding-block: 64px;
+  }
+}
+
+/* Las anclas no quedan tapadas por el header fijo */
+[id] {
+  scroll-margin-top: 104px;
+}
