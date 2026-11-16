@@ -1,0 +1,97 @@
+.seccion {
+  padding-block: 96px;
+  border-top: 1px solid var(--color-borde);
+  background: var(--color-blanco);
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 64px;
+}
+
+.texto {
+  max-width: 520px;
+  margin-top: 24px;
+  color: var(--color-texto-2);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tituloGrafica {
+  margin-bottom: 20px;
+  color: var(--color-texto-3);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.barras {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.departamento {
+  color: var(--color-texto);
+}
+
+.pista {
+  display: block;
+  height: 10px;
+  background: var(--color-barra-fondo);
+}
+
+.barra {
+  display: block;
+  height: 100%;
+}
+
+.azul {
+  background: var(--color-azul);
+}
+
+.noche {
+  background: var(--color-noche);
+}
+
+.gris {
+  background: var(--color-barra-gris);
+}
+
+.valor {
+  font-family: var(--fuente-mono);
+  font-weight: 500;
+  text-align: right;
+}
+
+@media (max-width: 899px) {
+  .columnas {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion {
+    padding-block: 64px;
+  }
+
+  .fila {
+    grid-template-columns: 112px minmax(0, 1fr) 28px;
+    gap: 10px;
+    font-size: 14px;
+  }
+}
