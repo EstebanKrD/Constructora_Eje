@@ -13,3 +13,11 @@ export function esCorreoValido(correo: string): boolean {
 export function esNumeroWhatsappValido(numero: string): boolean {
   return PATRON_WHATSAPP.test(numero.trim())
 }
+
+/** Devuelve el valor solo si está en la lista blanca; si no, null. */
+export function valorPermitido<T extends string>(
+  valor: string | null,
+  permitidos: readonly T[],
+): T | null {
+  return permitidos.find((permitido) => permitido === valor) ?? null
+}

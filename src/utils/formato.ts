@@ -10,3 +10,10 @@ export function valorOPorConfirmar(valor: string): string {
 export function aniosDesde(anio: number, hoy: Date = new Date()): number {
   return hoy.getFullYear() - anio
 }
+
+const FORMATO_PESOS = new Intl.NumberFormat('es-CO', { maximumFractionDigits: 0 })
+
+/** 1166758456 → "$1.166.758.456" (separador de miles con punto). */
+export function formatearPesos(valor: number): string {
+  return `$${FORMATO_PESOS.format(valor)}`
+}
