@@ -17,9 +17,16 @@ const LOGOS = {
 
 export function Header() {
   const { pathname } = useLocation()
-  // El menú queda abierto solo en la ruta donde se abrió: al navegar se cierra solo.
-  const [rutaMenuAbierto, setRutaMenuAbierto] = useState<string | null>(null)
-  const abierto = rutaMenuAbierto === pathname
+  const [abierto, setAbierto] = useState(false)
+  const [rutaAnterior, setRutaAnterior] = useState(pathname)
+
+  // Al cambiar de ruta el menú se cierra y su estado se limpia, para que no
+  // reaparezca abierto al volver a la ruta anterior.
+  if (rutaAnterior !== pathname) {
+    setRutaAnterior(pathname)
+    setAbierto(false)
+  }
+
   const botonMenu = useRef<HTMLButtonElement>(null)
   const logo = LOGOS[SITIO.versionLogoHeader]
 
@@ -27,7 +34,7 @@ export function Header() {
     if (!abierto) return
     const alPresionarTecla = (evento: KeyboardEvent) => {
       if (evento.key === 'Escape') {
-        setRutaMenuAbierto(null)
+        setAbierto(false)
         botonMenu.current?.focus()
       }
     }
@@ -35,7 +42,7 @@ export function Header() {
     return () => document.removeEventListener('keydown', alPresionarTecla)
   }, [abierto])
 
-  const alternarMenu = () => setRutaMenuAbierto(abierto ? null : pathname)
+  const alternarMenu = () => setAbierto((valor) => !valor)
 
   return (
     <header className={estilos.header}>
