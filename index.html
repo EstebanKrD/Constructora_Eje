@@ -3,12 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Constructora del Eje · Diseño, construcción y estructura metálica</title>
+    <!-- Respaldo sin JavaScript: cada página define su propio título y descripción
+         y src/main.tsx retira estas dos etiquetas (data-estatico) al iniciar. -->
+    <title data-estatico>Constructora del Eje · Diseño, construcción y estructura metálica</title>
     <meta
       name="description"
+      data-estatico
       content="Constructora del Eje Ingeniería y Proyectos SAS: diseño, construcción, estructura metálica y gerencia de proyectos con un solo responsable. Más de 30 años y 227 contratos ejecutados en 21 departamentos."
     />
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph y Twitter. La imagen se vuelve URL absoluta en el build cuando SITIO.dominio existe. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="Constructora del Eje" />
+    <meta property="og:title" content="Constructora del Eje · Diseño, construcción y estructura metálica" />
+    <meta
+      property="og:description"
+      content="Diseño, construcción, estructura metálica y gerencia de proyectos con un solo responsable. Más de 30 años y 227 contratos ejecutados en 21 departamentos."
+    />
+    <meta property="og:image" content="/og-imagen.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Vivienda campestre construida por Constructora del Eje" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Constructora del Eje · Diseño, construcción y estructura metálica" />
+    <meta
+      name="twitter:description"
+      content="Diseño, construcción, estructura metálica y gerencia de proyectos con un solo responsable. Más de 30 años y 227 contratos ejecutados en 21 departamentos."
+    />
+    <meta name="twitter:image" content="/og-imagen.jpg" />
+
+    <!-- Datos estructurados (bloque de datos, no se ejecuta). Al tener teléfono, correo,
+         dirección, dominio y redes, se agregan aquí (ver docs/DESPLIEGUE.md). -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "GeneralContractor"],
+        "name": "Constructora del Eje",
+        "legalName": "Constructora del Eje Ingeniería y Proyectos S.A.S.",
+        "description": "Diseño, construcción, estructura metálica y gerencia de proyectos con un solo responsable. Más de 30 años y 227 contratos ejecutados en 21 departamentos.",
+        "areaServed": [
+          { "@type": "Country", "name": "Colombia" },
+          { "@type": "State", "name": "Quindío" },
+          { "@type": "State", "name": "Caldas" },
+          { "@type": "State", "name": "Risaralda" },
+          { "@type": "State", "name": "Antioquia" },
+          { "@type": "State", "name": "Valle del Cauca" },
+          { "@type": "State", "name": "Caquetá" },
+          { "@type": "State", "name": "Tolima" },
+          { "@type": "State", "name": "Cundinamarca" },
+          { "@type": "State", "name": "Santander" },
+          { "@type": "State", "name": "Meta" }
+        ],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño integral" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vivienda a la medida" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Edificaciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Adecuaciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estructura metálica" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gerencia de proyectos" } }
+        ],
+        "sameAs": []
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -41,3 +41,9 @@ export const NO_ENCONTRADO = {
   titulo: 'Esta página no existe.',
   boton: { etiqueta: 'Volver al inicio', ruta: '/' },
 }
+
+export const SEO_NO_ENCONTRADO = {
+  titulo: 'Página no encontrada · Constructora del Eje',
+  descripcion:
+    'La página que busca no existe. Vuelva al inicio de Constructora del Eje para conocer nuestros servicios de diseño, construcción y estructura metálica.',
+}

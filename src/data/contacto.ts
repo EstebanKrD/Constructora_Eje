@@ -100,3 +100,9 @@ export const SOLICITUD_LISTA = {
   abrirDeNuevo: 'Abrir de nuevo',
   otraSolicitud: 'Enviar otra solicitud',
 }
+
+export const SEO_CONTACTO = {
+  titulo: 'Contacto · Constructora del Eje',
+  descripcion:
+    'Cuéntenos su idea, el lote o el inmueble y su presupuesto. Le respondemos para agendar la visita técnica y empezar su proyecto con fechas claras.',
+}

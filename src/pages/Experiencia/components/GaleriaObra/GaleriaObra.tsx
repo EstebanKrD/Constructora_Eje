@@ -67,6 +67,8 @@ export function GaleriaObra({ titulo, fotos }: GaleriaObraProps) {
             alt={foto.alt}
             width={foto.ancho}
             height={foto.alto}
+            loading="lazy"
+            decoding="async"
           />
           <figcaption className={estilos.posicion} aria-live="polite">
             {GALERIA.posicion(indice + 1, total)}

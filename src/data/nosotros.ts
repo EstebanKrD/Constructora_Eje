@@ -102,3 +102,9 @@ export const PRESENCIA = {
     { departamento: '11 más', municipios: 16, tono: 'gris' },
   ] satisfies PresenciaDepartamento[],
 }
+
+export const SEO_NOSOTROS = {
+  titulo: 'Nosotros · Constructora del Eje',
+  descripcion:
+    'Un arquitecto y cinco ingenieros civiles al frente de cada obra. Conozca a los socios, su trayectoria y nuestra presencia en 106 municipios de Colombia.',
+}

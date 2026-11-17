@@ -177,3 +177,9 @@ export const CTA_EXPERIENCIA = {
   titulo: '¿Tiene un proyecto en mente?',
   boton: { etiqueta: 'Hablemos de su proyecto', ruta: '/contacto' },
 }
+
+export const SEO_EXPERIENCIA = {
+  titulo: 'Experiencia y obras · Constructora del Eje',
+  descripcion:
+    'Obras, casos de éxito y contratos verificables: megacolegio, estadios, vivienda multifamiliar, sedes de salud y estructura metálica en Colombia.',
+}

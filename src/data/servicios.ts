@@ -102,3 +102,9 @@ export const DETALLES_SERVICIO: DetalleServicio[] = [
     },
   },
 ]
+
+export const SEO_SERVICIOS = {
+  titulo: 'Servicios · Constructora del Eje',
+  descripcion:
+    'Diseño integral, vivienda a la medida, edificaciones, adecuaciones, estructura metálica y gerencia de proyectos: diseñamos, gerenciamos y construimos.',
+}

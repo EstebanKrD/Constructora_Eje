@@ -1,7 +1,7 @@
 import { FranjaClientes } from '@/components/secciones/FranjaClientes'
 import { ListaRazones } from '@/components/secciones/ListaRazones'
 import { EtiquetaSeccion } from '@/components/ui/EtiquetaSeccion'
-import { CLIENTES_INICIO, POR_QUE } from '@/data/inicio'
+import { CLIENTES_INICIO, POR_QUE, SEO_INICIO } from '@/data/inicio'
 import { BloqueSalud } from '@/pages/Inicio/components/BloqueSalud'
 import { DisenoConstruccion } from '@/pages/Inicio/components/DisenoConstruccion'
 import { Hero } from '@/pages/Inicio/components/Hero'
@@ -12,6 +12,8 @@ import estilos from './Inicio.module.css'
 export function Inicio() {
   return (
     <>
+      <title>{SEO_INICIO.titulo}</title>
+      <meta name="description" content={SEO_INICIO.descripcion} />
       <Hero />
 
       <section className={estilos.clientes} aria-labelledby="clientes-inicio">

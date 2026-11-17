@@ -1,3 +1,4 @@
+import { SEO_CONTACTO } from '@/data/contacto'
 import { useSolicitud } from '@/pages/Contacto/hooks/useSolicitud'
 import { DatosContacto } from '@/pages/Contacto/components/DatosContacto'
 import { FormularioSolicitud } from '@/pages/Contacto/components/FormularioSolicitud'
@@ -17,6 +18,8 @@ export function Contacto() {
 
   return (
     <>
+      <title>{SEO_CONTACTO.titulo}</title>
+      <meta name="description" content={SEO_CONTACTO.descripcion} />
       <PasosInicio />
       <section className="seccion">
         <div className={clases('contenedor', estilos.columnas)}>

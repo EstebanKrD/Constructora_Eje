@@ -1,6 +1,11 @@
 import { EncabezadoPagina } from '@/components/secciones/EncabezadoPagina'
 import { TarjetaServicio } from '@/components/secciones/TarjetaServicio'
-import { DETALLES_SERVICIO, ENCABEZADO_SERVICIOS, SERVICIOS } from '@/data/servicios'
+import {
+  DETALLES_SERVICIO,
+  ENCABEZADO_SERVICIOS,
+  SEO_SERVICIOS,
+  SERVICIOS,
+} from '@/data/servicios'
 import { DetalleServicio } from '@/pages/Servicios/components/DetalleServicio'
 import { Pilares } from '@/pages/Servicios/components/Pilares'
 import estilos from './Servicios.module.css'
@@ -8,6 +13,8 @@ import estilos from './Servicios.module.css'
 export function Servicios() {
   return (
     <>
+      <title>{SEO_SERVICIOS.titulo}</title>
+      <meta name="description" content={SEO_SERVICIOS.descripcion} />
       <EncabezadoPagina
         etiqueta={ENCABEZADO_SERVICIOS.etiqueta}
         titulo={ENCABEZADO_SERVICIOS.titulo}

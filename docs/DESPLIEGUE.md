@@ -153,6 +153,12 @@ Después: `sudo nginx -t && sudo systemctl reload nginx`.
 
 ## 8. Datos que se actualizan después
 
-- **`src/config/sitio.ts`**: WhatsApp (`whatsappNumero`, hoy `null`), correo, teléfono, dirección, NIT, canal y dominio. Requiere un nuevo build.
+- **`src/config/sitio.ts`**: WhatsApp (`whatsappNumero`, hoy `null`), correo, teléfono, dirección, NIT, canal y dominio. Requiere un nuevo build. Con el dominio, el build genera `dist/sitemap.xml`, completa la línea `Sitemap` de `robots.txt` y vuelve absolutas las imágenes de Open Graph y Twitter; mientras esté vacío, el build lo avisa en la consola.
+- **Datos estructurados (JSON-LD) en `index.html`**: son estáticos. Al tener los datos, agrega dentro del bloque `application/ld+json` solo los que existan, con el mismo formato:
+  - `"url": "https://DOMINIO"` y `"logo": "https://DOMINIO/favicon.png"`
+  - `"telephone": "+57 300 000 0000"` y `"email": "correo@DOMINIO"`
+  - `"address": { "@type": "PostalAddress", "streetAddress": "…", "addressLocality": "Armenia", "addressRegion": "Quindío", "addressCountry": "CO" }`
+  - `"sameAs": ["https://…"]` con las redes sociales oficiales (hoy vacío)
+  - Comprueba el resultado en https://validator.schema.org después de publicar.
 - **`public/.well-known/security.txt`**: renovar `Expires` antes de que venza (un año) y descomentar `Canonical` con el dominio real.
 - **`src/data/politica.ts`**: fecha de publicación de la política de datos, después de la revisión legal.

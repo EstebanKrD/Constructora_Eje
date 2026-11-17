@@ -100,3 +100,9 @@ export const OBRAS_DESTACADAS = {
   enlace: { etiqueta: 'Ver toda la experiencia', ruta: '/experiencia' },
   ids: ['megacolegio-ezequiel-moreno', 'estadio-centenario', 'villas-de-ensueno'],
 }
+
+export const SEO_INICIO = {
+  titulo: 'Constructora del Eje · Diseño, construcción y estructura metálica',
+  descripcion:
+    'Diseño, construcción, estructura metálica y gerencia de proyectos con un solo responsable. Más de 30 años y 227 contratos ejecutados en 21 departamentos.',
+}
